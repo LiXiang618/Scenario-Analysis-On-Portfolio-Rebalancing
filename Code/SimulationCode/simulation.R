@@ -1,0 +1,56 @@
+ln_S = cumsum(rnorm(n,0,1)*sigma*sqrt(dt) + mu*dt) + log(S_0)
+S = exp(ln_S)
+B = cumsum(rep(r*B_0*dt,n))+B_0
+Portfolio_init()
+
+#Buy and hold strategy
+V_bh = numS*S + numB*B
+
+#Daily Rebalance
+Portfolio_init()
+for(i in 1:n)
+{
+  tmpV = numS*S[i]+numB*B[i]+Cash
+  V = c(V,tmpV)
+  if(i%%(n/252)==0)
+  {
+    numS = floor(tmpV*w1/S[i])
+    numB = floor(tmpV*w2/B[i])
+    Cash = tmpV - numS*S[i] - numB*B[i]
+  }
+}
+V_daily = V
+
+#Monthly Rebalance
+Portfolio_init()
+for(i in 1:n)
+{
+  tmpV = numS*S[i]+numB*B[i]+Cash
+  V = c(V,tmpV)
+  if(i%%(n/12)==0)
+  {
+    numS = floor(tmpV*w1/S[i])
+    numB = floor(tmpV*w2/B[i])
+    Cash = tmpV - numS*S[i] - numB*B[i]
+  }
+}
+V_mon = V
+
+#Continuous Rebalance
+Portfolio_init()
+for(i in 1:n)
+{
+  tmpV = numS*S[i]+numB*B[i]+Cash
+  V = c(V,tmpV)
+  numS = floor(tmpV*w1/S[i])
+  numB = floor(tmpV*w2/B[i])
+  Cash = tmpV - numS*S[i] - numB*B[i]
+}
+V_con = V
+
+
+
+
+
+
+

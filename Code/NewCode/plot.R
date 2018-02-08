@@ -1,0 +1,27 @@
+par(mfrow=c(2,2))
+plot(S,type = "l",col = "red")
+plot(B,type = "l",col = "green")
+plot(V_bh,type = "l",col = "purple")
+plot(V,type = "l",col = "purple")
+
+par(mfrow=c(2,2))
+plot(V_bh,type = "l",col = "green")
+plot(V_daily,type = "l",col = "pink")
+plot(V_mon,type = "l",col = "red")
+plot(V_con,type = "l",col = "purple")
+
+par(mfrow=c(2,2))
+hist(v_bh,100)
+hist(v_daily,100)
+hist(v_mon,100)
+hist(v_con,100) 
+
+par(mfrow=c(2,2))
+hist(v_bh,100)
+hist(v_con,100) 
+hist(v_new,100)
+
+par(mfrow=c(2,2))
+plot(V_bh,type = "l",col = "green")
+plot(V_con,type = "l",col = "purple")
+plot(V_new,type = "l",col = "blue")

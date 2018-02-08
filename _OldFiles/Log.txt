@@ -1,0 +1,18 @@
+10/5/2017 Xiang Li
+Add papers from course site.
+Add latex template.
+Add paper notes.
+
+
+http://www.efficientfrontier.com/ef/996/rebal.htm 
+THE REBALANCING BONUS By William J. Bernstein
+
+10/15/2017 Zhibo Wang
+Add plan
+
+10/15 Shan Tao
+Add â€œliterature review_Shan Taoâ€?
+Add â€œIntroductionâ€?
+
+10/15 Xiang Li
+Update Introduction section.

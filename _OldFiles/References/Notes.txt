@@ -1,0 +1,20 @@
+Wise1996.pdf
+maintain fixed market value propotions of the assets
+geometric diffusion model
+rebalancing has a higher probability to exceed passive action
+
+Gabay2007.pdf
+rebalancing captures an excess growth which increases with time and volatility
+benchmark cap-weighted
+
+Bouchey2012.pdf
+volatility harvesting
+
+Edesses2014.pdf
+Rebalancing doesn't really pay off.
+
+Edesses2016.pdf
+The benefit of rebalancing is small.
+
+Cuthbertson2016.pdf
+Within this literature, it is widely claimed that rebalancing strategies automatically generate rebalancing returns by ¡®buying low and selling high¡¯ even when asset returns show no predictable time structure.

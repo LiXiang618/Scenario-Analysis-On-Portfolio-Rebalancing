@@ -1,0 +1,187 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Arsclassica Article
+% LaTeX Template
+% Version 1.1 (1/8/17)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Lorenzo Pantieri (http://www.lorenzopantieri.net) with extensive modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[
+10pt, % Main document font size
+a4paper, % Paper type, use 'letterpaper' for US Letter paper
+oneside, % One page layout (no page indentation)
+%twoside, % Two page layout (page indentation for binding and different headers)
+headinclude,footinclude, % Extra spacing for the header and footer
+BCOR5mm, % Binding correction
+]{scrartcl}
+
+
+\usepackage{natbib}
+
+
+\input{structure.tex} % Include the structure.tex file which specified the document structure and layout
+
+\hyphenation{Fortran hy-phen-ation} % Specify custom hyphenation points in words with dashes where you would like hyphenation to occur, or alternatively, don't put any dashes in a word to stop hyphenation altogether
+
+%----------------------------------------------------------------------------------------
+%	TITLE AND AUTHOR(S)
+%----------------------------------------------------------------------------------------
+
+\title{\normalfont\spacedallcaps{Effectiveness of Portfolio Rebalancing from An Empirical Standpoint}} % The article title
+
+%\subtitle{Subtitle} % Uncomment to display a subtitle
+
+\author{Shan Tao, Xiang Li, Zhibo Wang} % The article author(s) - author affiliations need to be specified in the AUTHOR AFFILIATIONS block
+
+\date{\today} % An optional date to appear under the author(s)
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	HEADERS
+%----------------------------------------------------------------------------------------
+
+\renewcommand{\sectionmark}[1]{\markright{\spacedlowsmallcaps{#1}}} % The header for all pages (oneside) or for even pages (twoside)
+%\renewcommand{\subsectionmark}[1]{\markright{\thesubsection~#1}} % Uncomment when using the twoside option - this modifies the header on odd pages
+\lehead{\mbox{\llap{\small\thepage\kern1em\color{halfgray} \vline}\color{halfgray}\hspace{0.5em}\rightmark\hfil}} % The header style
+
+\pagestyle{scrheadings} % Enable the headers specified in this block
+
+%----------------------------------------------------------------------------------------
+%	TABLE OF CONTENTS & LISTS OF FIGURES AND TABLES
+%----------------------------------------------------------------------------------------
+
+\maketitle % Print the title/author/date block
+
+\setcounter{tocdepth}{2} % Set the depth of the table of contents to show sections and subsections only
+
+\tableofcontents % Print the table of contents
+
+\listoffigures % Print the list of figures
+
+\listoftables % Print the list of tables
+
+%----------------------------------------------------------------------------------------
+%	ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\section*{Abstract} % This section will not appear in the table of contents due to the star (\section*)
+
+
+
+%----------------------------------------------------------------------------------------
+%	AUTHOR AFFILIATIONS
+%----------------------------------------------------------------------------------------
+
+
+%----------------------------------------------------------------------------------------
+
+\newpage % Start the article content on the second page, remove this if you have a longer abstract that goes onto the second page
+
+%----------------------------------------------------------------------------------------
+%	INTRODUCTION
+%----------------------------------------------------------------------------------------
+
+\section{Introduction}
+
+Rebalancing is an essential branch of the portfolio management theory. As for holding positions of portfolios, the manager should always aim at the tradeoff between risk and return in the dynamic financial market to improve the performance. Strategies including buy-and-hold and rebalancing could be effective tools to achieve the goal to maximize the portfolio value. However, it is a heated issue to discuss which tool is more superior, the buy-and-hold, the regular rebalancing at fixed time intervals or continual rebalancing?\\
+
+The topic of portfolio rebalancing has been discussed since long time ago. By using geometric diffusion model, the probability that continually rebalancing outperforms the 'buy and hold' strategy has been evaluated by \cite{wise1996}. However, it does not take into account a portfolio with more than two assets and it does not include transaction cost in the model. By using Black-Scholes framework \cite{gabay2007} further shows that with increasing time and volatility, the rebalancing portfolio can capture an excess growth against 'buy and hold' strategy. \cite{bouchey2012} also draws the same conclusion that diversify and rebalance is beneficial to managing risk and enhancing returns in the long run. However, it is also stated that the cost of transaction is likely to outweigh the rebalancing benefit. Thus an effective control of transaction cost is highly needed. Also there are numerous literatures challenge the effectiveness of rebalance. By challenging "The Rebalancing Bonus" and pointing out the flaws in the mathematical reasoning, \cite{Edesess2014} argues that rebalancing has no benefit on either increasing returns nor reducing risk. Based on that, \cite{Kitces2015} states the value of rebalancing is dependent on the similarity of the returns between the assets within the portfolio. \cite{Edesess2016} further claims that the misuse of the medians of the probability distribution in finance papers leads to wrong conclusion. \cite{cuthbertson2016}
+also points out that the obvious benefits of rebalancing over infinite horizons cannot guarantee that it is the same over finite horizon.\\
+
+Basically what we want to do is to discuss the effectiveness of rebalancing strategy and its efficiency using qualitative and quantitative analysis. Thus, a series of plans are by far included to facilitate and illustrate our research. Firstly, we evaluate the evidence, both pro and con, for rebalancing strategy and repeat some of the results to find out their advantages and disadvantages under different investment environment. Then, we are going to take into consideration more factors such as transaction cost, asset correlation, different return patterns, etc. Next, we use both historical market data and simulation to test our hypotheses. Finally, conclusions are drawn and a more clear picture of the effectiveness of rebalancing will be seen.
+ 
+\phantom{\cite{dichtl2014value}}
+\phantom{\cite{tokat2007portfolio}}
+\phantom{\cite{buetow2002benefits}}
+\phantom{\cite{donohue2003optimal}}
+\phantom{\cite{eakins2007examination}}
+\phantom{\cite{mulvey2002rebalancing}}
+\phantom{\cite{evans2005harnessing}}
+\phantom{\cite{krokhmal2002risk}}
+
+     
+ 
+%----------------------------------------------------------------------------------------
+%	METHODS
+%----------------------------------------------------------------------------------------
+
+\section{Methods}
+In our paper, we are going to make a comprehensive analysis on situations which may affect the relative performances of Buy and Hold strategy and re-balance strategy. We split the re-balance strategy into three sub-categories, monthly-rebalance, daily-rebalance and continously-rebalance. We then use Monte-Carlo simulation to generate both risk and risk-free assets under different presumed scenarios, and get the distribution of the value of the portfolios under both Buy and Hold and re-balance strategies.\\
+Next we use real market data to validate the results we find in simulation by matching the parameters of read data with the simulated data and comparing the relative goodness of Buy and Hold and re-balance strategies under real market scenarios.\\
+Finally, based on our analysis on the pros and cons of traditional Buy and Hold and re-balance strategies, we propose yet another innovative re-balance method which has advantage over the traditional ones and validate its effectiveness with real market data.
+\subsection{Simulation}
+In the first part of our work, we use Monte-Carlo simulation to simulate different market scenarios. Concretely, we split the who asset set into two categories: risk asset, and risk-free asset. For risk asset, we define $\mu$ as its annual return, $\sigma$ as its annual percentage volatility. For risk-free asset, we define $r$ as risk-free interest rate. We assume risk and risk-free assets are independent. We assign $\omega$ as the weight of risk asset, and accordingly, the weight of risk-free asset is $1-\omega$.
+For risk asset, we assume it follows log-normal distribution and thus its price follows:
+$$lnS_{t} = lnS_{t-1} + \mu\Delta t + \sigma\sqrt{\Delta t}\varepsilon_{t} $$
+where:\\
+$\Delta t$, the time interval, which equals the total time horizon T over the number of intervals N.\\
+$S_t$, the value of the risk asset at time t; \\
+$\mu$, the continuous annual return of $S$, i.e. $\mu = \frac{\sum_{i=1}^{N}ln(\frac{S_i}{S_{i-1}})}{n\Delta t} = \frac{ ln(\frac{S_N}{S_0}) }{n\Delta t}$ \\
+$\sigma$, the volatility of the return of $S$, i.e. $\sigma = \frac{ \sum_{i=1}^{N} ( ln(\frac{S_i}{S_{i-1}}) - \mu  )^2   }{(n-1)\Delta t}$ \\
+$\varepsilon_t$, the random process which follows standard normal distribution. \\
+It is worth mentioning that the $\mu$ and $\sigma$ here are not calculated by the formulas given about. Rather, they are defined as input parameters in the simulation process. In our next stage, however, we use the formulas to help us get the $\mu$ and $\sigma$ of the real market data. \\
+For risk-free asset, we have:
+$$ lnB_t = lnB_{t-1} + r\Delta t $$
+As we can see, there is no stochastic process. Thus it is risk free. \\
+At time 0, the value of the portfolio $P_0$ consists of $\omega$ risk asset and $1-\omega$ risk-free asset. The units of risk asset are $\varphi = \frac{\omega\cdot P_0}{S_0} $, and the units of risk-free asset are $\psi =  \frac{(1-\omega)\cdot P_0}{B_0}$. \\
+In our Buy and Hold strategy, we keep the units of risk asset and the units of risk-free asset constant over the simulation period. Consequently the weight $\omega$ will change over the time. In the rebalance strategy, however, we reset the wight $\omega$ to its original value every time we rebalance the protfolio. As a result, in the continuous rebalance strategy, the $\omega$ is constant over the time while the number of units of assets may change.\\
+The goal of our simulation is to get the distribution of the final value of the portfolio under each strategy. In every iteration of the simulation, we can get one final value of the portfolio. We repeat the process many times, and we can get a distribution of the final values. We then calculate some statistics of the distribution including mean value, standard deviation, skewness, kurtosis, etc, and compare the distributions obtained from each strategy.
+\subsection{Market Data Validation}
+Next, we use market data to validate our results obtained from the simulation.\\
+From Bloomberg terminal, we get daily market data of assets including market index, stock, foreign exchange and commodity over the past twenty years. For each single asset, we estimate its $\mu$ and $\sigma$ using the formulas we mentioned in the last section, and compare the performance of the portfolio with real asset and that of the simulated one with close $\mu$ and $\sigma$. If the relative performance between the Buy and Hold strategy and rebalance strategy under simulation shows the same pattern under real market data, we would say that our conclusion from the simulation is validated by the market data. \\
+The validation process is important in that first it shows the correctness of the models used in the simulation to a large degree and second it shows the patterns shown in simulation are applicable to the real market. We could thus use the conclusion drawn from the simulation to make our investment decisions in real market.
+\subsection{Another Rebalance Approach}
+Based on our analysis on the distributions under each market scenario, we finally propose another way of rebalancing that could beat Buy and Hold and traditional rebalance strategies under some specific situations.\\
+From the previous sections we know that Buy and Hold strategy keeps the units of asset constant over the time while continuous rebalance strategy keeps the weights of asset constant over the time. Our new approach, however, is a contingent rebalance mechanism which rebalances only if some criteria have been met. Mathematically, it follows:
+$$\omega_t = I\cdot\omega_0 + (1-I)\cdot(\frac{\varphi_{t-1} \cdot S_{t-1} }{P_{t-1}})$$
+where: \\
+$\varphi_{t-1}$ is the units of risk assets at time t-1;\\
+$I$ is a indicator function:
+$$I = \left\{\begin{array}{ll}
+1,\ if\ some\ critera\ are\ met \\
+0,\ otherwise
+\end{array}
+\right.$$
+Finally, we compare this new approach with both Buy and Hold strategy and traditional rebalance approaches, and validate our conclusion by using real market data.
+
+
+%----------------------------------------------------------------------------------------
+%	RESULTS AND DISCUSSION
+%----------------------------------------------------------------------------------------
+
+\section{Results and Discussion}
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+
+\renewcommand{\refname}{\spacedlowsmallcaps{References}} % For modifying the bibliography heading
+
+\bibliographystyle{apalike}
+
+\bibliography{references} % The file containing the bibliography
+
+
+
+%----------------------------------------------------------------------------------------
+
+\end{document}

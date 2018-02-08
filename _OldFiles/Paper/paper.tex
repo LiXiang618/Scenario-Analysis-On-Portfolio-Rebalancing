@@ -1,0 +1,151 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Arsclassica Article
+% LaTeX Template
+% Version 1.1 (1/8/17)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Lorenzo Pantieri (http://www.lorenzopantieri.net) with extensive modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[
+10pt, % Main document font size
+a4paper, % Paper type, use 'letterpaper' for US Letter paper
+oneside, % One page layout (no page indentation)
+%twoside, % Two page layout (page indentation for binding and different headers)
+headinclude,footinclude, % Extra spacing for the header and footer
+BCOR5mm, % Binding correction
+]{scrartcl}
+
+
+\usepackage{natbib}
+
+
+\input{structure.tex} % Include the structure.tex file which specified the document structure and layout
+
+\hyphenation{Fortran hy-phen-ation} % Specify custom hyphenation points in words with dashes where you would like hyphenation to occur, or alternatively, don't put any dashes in a word to stop hyphenation altogether
+
+%----------------------------------------------------------------------------------------
+%	TITLE AND AUTHOR(S)
+%----------------------------------------------------------------------------------------
+
+\title{\normalfont\spacedallcaps{Effectiveness of Portfolio Rebalancing from An Empirical Standpoint}} % The article title
+
+%\subtitle{Subtitle} % Uncomment to display a subtitle
+
+\author{Shan Tao, Xiang Li, Zhibo Wang} % The article author(s) - author affiliations need to be specified in the AUTHOR AFFILIATIONS block
+
+\date{\today} % An optional date to appear under the author(s)
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	HEADERS
+%----------------------------------------------------------------------------------------
+
+\renewcommand{\sectionmark}[1]{\markright{\spacedlowsmallcaps{#1}}} % The header for all pages (oneside) or for even pages (twoside)
+%\renewcommand{\subsectionmark}[1]{\markright{\thesubsection~#1}} % Uncomment when using the twoside option - this modifies the header on odd pages
+\lehead{\mbox{\llap{\small\thepage\kern1em\color{halfgray} \vline}\color{halfgray}\hspace{0.5em}\rightmark\hfil}} % The header style
+
+\pagestyle{scrheadings} % Enable the headers specified in this block
+
+%----------------------------------------------------------------------------------------
+%	TABLE OF CONTENTS & LISTS OF FIGURES AND TABLES
+%----------------------------------------------------------------------------------------
+
+\maketitle % Print the title/author/date block
+
+\setcounter{tocdepth}{2} % Set the depth of the table of contents to show sections and subsections only
+
+\tableofcontents % Print the table of contents
+
+\listoffigures % Print the list of figures
+
+\listoftables % Print the list of tables
+
+%----------------------------------------------------------------------------------------
+%	ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\section*{Abstract} % This section will not appear in the table of contents due to the star (\section*)
+
+
+
+%----------------------------------------------------------------------------------------
+%	AUTHOR AFFILIATIONS
+%----------------------------------------------------------------------------------------
+
+
+%----------------------------------------------------------------------------------------
+
+\newpage % Start the article content on the second page, remove this if you have a longer abstract that goes onto the second page
+
+%----------------------------------------------------------------------------------------
+%	INTRODUCTION
+%----------------------------------------------------------------------------------------
+
+\section{Introduction}
+
+Rebalancing is an essential branch of the portfolio management theory. As for holding positions of portfolios, the manager should always aim at the tradeoff between risk and return in the dynamic financial market to improve the performance. Strategies including buy-and-hold and rebalancing could be effective tools to achieve the goal to maximize the portfolio value. However, it is a heated issue to discuss which tool is more superior, the buy-and-hold, the regular rebalancing at fixed time intervals or continual rebalancing?\\
+
+The topic of portfolio rebalancing has been discussed since long time ago. By using geometric diffusion model, the probability that continually rebalancing outperforms the 'buy and hold' strategy has been evaluated by \cite{wise1996}. However, it does not take into account a portfolio with more than two assets and it does not include transaction cost in the model. By using Black-Scholes framework \cite{gabay2007} further shows that with increasing time and volatility, the rebalancing portfolio can capture an excess growth against 'buy and hold' strategy. \cite{bouchey2012} also draws the same conclusion that diversify and rebalance is beneficial to managing risk and enhancing returns in the long run. However, it is also stated that the cost of transaction is likely to outweigh the rebalancing benefit. Thus an effective control of transaction cost is highly needed. Also there are numerous literatures challenge the effectiveness of rebalance. By challenging "The Rebalancing Bonus" and pointing out the flaws in the mathematical reasoning, \cite{Edesess2014} argues that rebalancing has no benefit on either increasing returns nor reducing risk. Based on that, \cite{Kitces2015} states the value of rebalancing is dependent on the similarity of the returns between the assets within the portfolio. \cite{Edesess2016} further claims that the misuse of the medians of the probability distribution in finance papers leads to wrong conclusion. \cite{cuthbertson2016}
+also points out that the obvious benefits of rebalancing over infinite horizons cannot guarantee that it is the same over finite horizon.\\
+
+Basically what we want to do is to discuss the effectiveness of rebalancing strategy and its efficiency using qualitative and quantitative analysis. Thus, a series of plans are by far included to facilitate and illustrate our research. Firstly, we evaluate the evidence, both pro and con, for rebalancing strategy and repeat some of the results to find out their advantages and disadvantages under different investment environment. Then, we are going to take into consideration more factors such as transaction cost, asset correlation, different return patterns, etc. Next, we use both historical market data and simulation to test our hypotheses. Finally, conclusions are drawn and a more clear picture of the effectiveness of rebalancing will be seen.
+ 
+\phantom{\cite{dichtl2014value}}
+\phantom{\cite{tokat2007portfolio}}
+\phantom{\cite{buetow2002benefits}}
+\phantom{\cite{donohue2003optimal}}
+\phantom{\cite{eakins2007examination}}
+\phantom{\cite{mulvey2002rebalancing}}
+\phantom{\cite{evans2005harnessing}}
+\phantom{\cite{krokhmal2002risk}}
+
+     
+ 
+%----------------------------------------------------------------------------------------
+%	METHODS
+%----------------------------------------------------------------------------------------
+
+\section{Methods}
+
+
+
+%----------------------------------------------------------------------------------------
+%	RESULTS AND DISCUSSION
+%----------------------------------------------------------------------------------------
+
+\section{Results and Discussion}
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+
+\renewcommand{\refname}{\spacedlowsmallcaps{References}} % For modifying the bibliography heading
+
+\bibliographystyle{apalike}
+
+\bibliography{references} % The file containing the bibliography
+
+
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
